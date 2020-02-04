@@ -1,9 +1,9 @@
 class Post
-  attr_accessor :author, :name
+  attr_accessor :author, :title
   @@all = []
   
-  def initialize(name)
-    @name = name
+  def initialize(title)
+    @title = title
     @@all << self
   end
   
@@ -11,7 +11,7 @@ class Post
     @@all
   end
   
-  def artist_name
+  def author_name
     self.author ? self.author.name : nil
   end
 end

@@ -6,7 +6,7 @@ class Author
     @posts = []
   end
   
-  def songs
+  def posts
     Post.all.select {|song| song.author = self}
   end
   
@@ -15,8 +15,8 @@ class Author
     post.author = self
   end
   
-  def add_song_by_name(post_name)
-    post = Post.new(post_name)
+  def add_post_by_title(post_title)
+    post = Post.new(post_title)
     add_post(post)
   end
   

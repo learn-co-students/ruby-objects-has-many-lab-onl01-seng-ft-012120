@@ -6,8 +6,8 @@ class Author
     @posts = []
   end
   
-  def add_post(works)
-    works.posts = self
+  def add_post(post)
+    @posts.author = self
   end
   
   def posts

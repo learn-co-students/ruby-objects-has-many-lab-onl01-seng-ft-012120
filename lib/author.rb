@@ -11,6 +11,9 @@ class Author
     end
 
     def posts
+      Post.all.select do |post|
+        @posts << post if post.author == self
+      end
       @posts
     end
   
@@ -28,6 +31,7 @@ class Author
     end
   
     def self.post_count
+      @@post_count = Post.all.length
       @@post_count
     end
   end

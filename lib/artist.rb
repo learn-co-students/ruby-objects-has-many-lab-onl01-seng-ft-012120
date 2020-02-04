@@ -23,5 +23,4 @@ class Artist
   def self.song_count
     Song.all.count {|song| song}
   end
-  
 end

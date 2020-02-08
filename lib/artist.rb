@@ -9,7 +9,7 @@ class Artist
   end
 
   def self.all
-    @@all
+    return @@all
   end
 
   def add_song(song)
@@ -17,11 +17,11 @@ class Artist
   end
   
   def self.song_count
-    Song.all.count
+    return Song.all.count
   end
 
   def songs
-    Song.all.select {|s| s.artist === self}
+    return Song.all.select {|s| s.artist === self}
   end
   
   def add_song_by_name(name)
